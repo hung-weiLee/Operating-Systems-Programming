@@ -1,0 +1,5 @@
+dd if=/dev/zero of=mydisk bs=1024 count=1024
+   mkfs -b 1024 mydisk 1024
+ sudo mount -o loop mydisk /mnt
+   (cd /mnt; sudo mkdir bin boot etc dev user; sudo touch file1 file2; ls -l;cd /mnt/user; sudo mkdir u1 u2;)
+ sudo  umount /mnt

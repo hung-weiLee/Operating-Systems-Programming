@@ -1,0 +1,9 @@
+dd if=/dev/zero of=disk bs=1024 count=1024
+mke2fs -b 1024 disk 1024
+mount disk /mnt
+(cd /mnt; sudo mkdir bin boot dev etc user)
+umount /mnt
+
+(cd USER; sh mku u1; sh mku u2)
+echo done SDC disk
+ 

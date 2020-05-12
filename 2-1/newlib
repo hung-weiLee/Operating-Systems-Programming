@@ -1,0 +1,7 @@
+arm-none-eabi-gcc -c string.c
+
+ar -r strlib string.o
+
+arm-none-eabi-nm strlib
+
+#arm-none-eabi-ld -T t.ld ts.o t.o strlib -o t.elf
